@@ -1,8 +1,14 @@
-package exp5;
+import java.util.Scanner;
 
 public class SumOfDigits {
     public static void main(String[] args) {
-        int number = 12345;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        if (number < 0) {
+            System.out.println("Sum of digits is not defined for negative numbers.");
+            return;
+        }
         int sum = 0;
         while (number != 0) {
             sum += number % 10;
